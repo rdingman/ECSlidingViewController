@@ -1,2 +1,6 @@
-pod 'ECSlidingViewController', :path => '../'
-pod 'Kiwi/XCTest', '~> 2.2'
+platform :ios, '9.0'
+
+target "ECSlidingViewControllerTests" do
+    pod 'ECSlidingViewController', :path => '../'
+    pod 'Kiwi', '~> 2.4'
+end

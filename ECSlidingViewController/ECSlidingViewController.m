@@ -28,6 +28,7 @@
 #import "ECSlidingSegue.h"
 
 @interface ECSlidingViewController()
+@property (nonatomic, assign, readwrite) ECSlidingViewControllerTopViewPosition currentTopViewPosition;
 @property (nonatomic, assign) ECSlidingViewControllerOperation currentOperation;
 @property (nonatomic, strong) ECSlidingAnimationController *defaultAnimationController;
 @property (nonatomic, strong) ECSlidingInteractiveTransition *defaultInteractiveTransition;
@@ -107,7 +108,7 @@
 - (void)setup {
     self.anchorLeftPeekAmount    = 44;
     self.anchorRightRevealAmount = 276;
-    _currentTopViewPosition = ECSlidingViewControllerTopViewPositionCentered;
+    self.currentTopViewPosition = ECSlidingViewControllerTopViewPositionCentered;
     self.transitionInProgress = NO;
 }
 
@@ -817,29 +818,29 @@
 
 - (void)completeTransition:(BOOL)didComplete {
     if (self.currentOperation == ECSlidingViewControllerOperationNone) return;
-    
+
     if ([self transitionWasCancelled]) {
         if (self.currentOperation == ECSlidingViewControllerOperationAnchorLeft) {
-            _currentTopViewPosition = ECSlidingViewControllerTopViewPositionCentered;
+            self.currentTopViewPosition = ECSlidingViewControllerTopViewPositionCentered;
         } else if (self.currentOperation == ECSlidingViewControllerOperationAnchorRight) {
-            _currentTopViewPosition = ECSlidingViewControllerTopViewPositionCentered;
+            self.currentTopViewPosition = ECSlidingViewControllerTopViewPositionCentered;
         } else if (self.currentOperation == ECSlidingViewControllerOperationResetFromLeft) {
-            _currentTopViewPosition = ECSlidingViewControllerTopViewPositionAnchoredLeft;
+            self.currentTopViewPosition = ECSlidingViewControllerTopViewPositionAnchoredLeft;
         } else if (self.currentOperation == ECSlidingViewControllerOperationResetFromRight) {
-            _currentTopViewPosition = ECSlidingViewControllerTopViewPositionAnchoredRight;
+            self.currentTopViewPosition = ECSlidingViewControllerTopViewPositionAnchoredRight;
         }
     } else {
         if (self.currentOperation == ECSlidingViewControllerOperationAnchorLeft) {
-            _currentTopViewPosition = ECSlidingViewControllerTopViewPositionAnchoredLeft;
+            self.currentTopViewPosition = ECSlidingViewControllerTopViewPositionAnchoredLeft;
         } else if (self.currentOperation == ECSlidingViewControllerOperationAnchorRight) {
-            _currentTopViewPosition = ECSlidingViewControllerTopViewPositionAnchoredRight;
+            self.currentTopViewPosition = ECSlidingViewControllerTopViewPositionAnchoredRight;
         } else if (self.currentOperation == ECSlidingViewControllerOperationResetFromLeft) {
-            _currentTopViewPosition = ECSlidingViewControllerTopViewPositionCentered;
+            self.currentTopViewPosition = ECSlidingViewControllerTopViewPositionCentered;
         } else if (self.currentOperation == ECSlidingViewControllerOperationResetFromRight) {
-            _currentTopViewPosition = ECSlidingViewControllerTopViewPositionCentered;
+            self.currentTopViewPosition = ECSlidingViewControllerTopViewPositionCentered;
         }
     }
-    
+
     if ([self.currentAnimationController respondsToSelector:@selector(animationEnded:)]) {
         [self.currentAnimationController animationEnded:didComplete];
     }

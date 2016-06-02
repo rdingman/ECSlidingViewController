@@ -1,21 +1,19 @@
 PODS:
-  - ECSlidingViewController (2.0.0-beta1)
-  - Kiwi/ARC (2.2.3)
-  - Kiwi/NonARC (2.2.3)
-  - Kiwi/XCTest (2.2.3):
-    - Kiwi/ARC
-    - Kiwi/NonARC
+  - ECSlidingViewController (2.0.3)
+  - Kiwi (2.4.0)
 
 DEPENDENCIES:
   - ECSlidingViewController (from `../`)
-  - Kiwi/XCTest (~> 2.2)
+  - Kiwi (~> 2.4)
 
 EXTERNAL SOURCES:
   ECSlidingViewController:
     :path: ../
 
 SPEC CHECKSUMS:
-  ECSlidingViewController: 48b0087403b291128737a8a8e0d8117a709b87b7
-  Kiwi: 04c51e880831d291748ec702d42c4101f7eb95c9
+  ECSlidingViewController: 29d127209304574a2f8d01152d5fee4d841cccdc
+  Kiwi: f49c9d54b28917df5928fe44968a39ed198cb8a8
 
-COCOAPODS: 0.28.0
+PODFILE CHECKSUM: f7594bf24a3c9fa669f13a8f4cfa543278fe63cf
+
+COCOAPODS: 1.0.0

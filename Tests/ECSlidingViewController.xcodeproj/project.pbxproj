@@ -10,7 +10,7 @@
 		05C544B6181C4DF5002ED146 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05C544B5181C4DF5002ED146 /* XCTest.framework */; };
 		05C544B7181C4DF5002ED146 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05C544A7181C4DF5002ED146 /* Foundation.framework */; };
 		05F0C965183F2DF100EAE0C4 /* ECSlidingViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F0C964183F2DF100EAE0C4 /* ECSlidingViewControllerSpec.m */; };
-		0F33E39ED4CA4A97A0557A6B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D317877FBB54A4AB5F60195 /* libPods.a */; };
+		7E0D2193046EB0E42C6EE45A /* libPods-ECSlidingViewControllerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15D238DA021DD08CE79D5297 /* libPods-ECSlidingViewControllerTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,8 +21,9 @@
 		05C544B4181C4DF5002ED146 /* ECSlidingViewControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ECSlidingViewControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		05C544B5181C4DF5002ED146 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		05F0C964183F2DF100EAE0C4 /* ECSlidingViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ECSlidingViewControllerSpec.m; path = ECSlidingViewControllerSpecs/ECSlidingViewControllerSpec.m; sourceTree = "<group>"; };
-		430731A33F77496BAD5F870D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
-		8D317877FBB54A4AB5F60195 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		15D238DA021DD08CE79D5297 /* libPods-ECSlidingViewControllerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ECSlidingViewControllerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F619865EEFCFAB602A60A57 /* Pods-ECSlidingViewControllerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ECSlidingViewControllerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ECSlidingViewControllerTests/Pods-ECSlidingViewControllerTests.release.xcconfig"; sourceTree = "<group>"; };
+		DEF199DD852D2B71962989CA /* Pods-ECSlidingViewControllerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ECSlidingViewControllerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ECSlidingViewControllerTests/Pods-ECSlidingViewControllerTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,7 +33,7 @@
 			files = (
 				05C544B6181C4DF5002ED146 /* XCTest.framework in Frameworks */,
 				05C544B7181C4DF5002ED146 /* Foundation.framework in Frameworks */,
-				0F33E39ED4CA4A97A0557A6B /* libPods.a in Frameworks */,
+				7E0D2193046EB0E42C6EE45A /* libPods-ECSlidingViewControllerTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,7 +46,7 @@
 				05F0C961183F2C5800EAE0C4 /* ECSlidingViewControllerSpecs */,
 				05C544A6181C4DF5002ED146 /* Frameworks */,
 				05C544A5181C4DF5002ED146 /* Products */,
-				430731A33F77496BAD5F870D /* Pods.xcconfig */,
+				2E7276875A5A1E2DAAECBB81 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,7 +64,7 @@
 				052BE60C181C55EE00EE3577 /* UIKit.framework */,
 				05C544A7181C4DF5002ED146 /* Foundation.framework */,
 				05C544B5181C4DF5002ED146 /* XCTest.framework */,
-				8D317877FBB54A4AB5F60195 /* libPods.a */,
+				15D238DA021DD08CE79D5297 /* libPods-ECSlidingViewControllerTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -87,6 +88,15 @@
 			name = ECSlidingViewControllerSpecs;
 			sourceTree = "<group>";
 		};
+		2E7276875A5A1E2DAAECBB81 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DEF199DD852D2B71962989CA /* Pods-ECSlidingViewControllerTests.debug.xcconfig */,
+				8F619865EEFCFAB602A60A57 /* Pods-ECSlidingViewControllerTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -94,11 +104,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05C544CA181C4DF5002ED146 /* Build configuration list for PBXNativeTarget "ECSlidingViewControllerTests" */;
 			buildPhases = (
-				60E773D0D8F746B68B9DF08B /* Check Pods Manifest.lock */,
+				AEC454CF2CA0CED71F194A4B /* 📦 Check Pods Manifest.lock */,
 				05C544B0181C4DF5002ED146 /* Sources */,
 				05C544B1181C4DF5002ED146 /* Frameworks */,
 				05C544B2181C4DF5002ED146 /* Resources */,
-				5EA3B96B6705490C9EA1C6DB /* Copy Pods Resources */,
+				D30C8660BFBD21A2D5AF14DE /* 📦 Embed Pods Frameworks */,
+				0E6B86BD356CDEA2F8F4F0CC /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -146,34 +157,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5EA3B96B6705490C9EA1C6DB /* Copy Pods Resources */ = {
+		0E6B86BD356CDEA2F8F4F0CC /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ECSlidingViewControllerTests/Pods-ECSlidingViewControllerTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		60E773D0D8F746B68B9DF08B /* Check Pods Manifest.lock */ = {
+		AEC454CF2CA0CED71F194A4B /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D30C8660BFBD21A2D5AF14DE /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ECSlidingViewControllerTests/Pods-ECSlidingViewControllerTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -262,7 +288,7 @@
 		};
 		05C544CB181C4DF5002ED146 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 430731A33F77496BAD5F870D /* Pods.xcconfig */;
+			baseConfigurationReference = DEF199DD852D2B71962989CA /* Pods-ECSlidingViewControllerTests.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -285,7 +311,7 @@
 		};
 		05C544CC181C4DF5002ED146 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 430731A33F77496BAD5F870D /* Pods.xcconfig */;
+			baseConfigurationReference = 8F619865EEFCFAB602A60A57 /* Pods-ECSlidingViewControllerTests.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				FRAMEWORK_SEARCH_PATHS = (
